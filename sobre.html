@@ -119,26 +119,27 @@
             font-weight: bold;
         }
 
-        /* Botão Voltar ao Topo */
+        /* O que mudou/melhorou aqui: Garantiu que o botão use propriedades robustas de transição */
         .btn-topo {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: #000;
             border: 2px solid #FFD700;
             border-radius: 50%;
             color: #FFD700;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 999;
+            z-index: 1000;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease;
+            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
         .btn-topo.visivel {
@@ -149,6 +150,7 @@
         .btn-topo:hover {
             background: #FFD700;
             color: #000;
+            transform: scale(1.1);
         }
 
         footer {
@@ -163,7 +165,7 @@
         @media (max-width: 768px) {
             body { padding-top: 80px; }
             h2 { font-size: 28px; }
-            .btn-topo { bottom: 20px; right: 20px; }
+            .btn-topo { bottom: 20px; right: 20px; width: 45px; height: 45px; }
         }
     </style>
 </head>
@@ -249,16 +251,16 @@
     <script>
         const btnTopo = document.getElementById('btnTopo');
 
-        // Monitora o scroll para exibir ou ocultar o botão
+        // Monitora o scroll com uma margem segura
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 150) {
+            if (window.scrollY > 200) { 
                 btnTopo.classList.add('visivel');
             } else {
                 btnTopo.classList.remove('visivel');
             }
         });
 
-        // Evento de clique para retornar ao topo com transição suave
+        // Evento de clique para retornar ao topo de forma suave
         btnTopo.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -268,5 +270,4 @@
     </script>
 
 </body>
-
 </html>
