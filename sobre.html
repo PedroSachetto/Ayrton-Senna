@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre a Equipe - Ayrton Senna</title>
+    <title>Sobre a Equipe</title>
 
     <style>
         * {
@@ -18,11 +18,12 @@
             background: linear-gradient(135deg, #000, #1a1a1a, #000);
             color: white;
             scroll-behavior: smooth;
+            padding-top: 100px;
         }
 
         header {
             background: rgb(2, 0, 0);
-            padding: 15px;
+            padding: 20px;
             border-bottom: 3px solid #FFD700;
             position: fixed;
             width: 100%;
@@ -38,48 +39,11 @@
             font-size: 24px;
             font-weight: bold;
             text-align: center;
-        }
-
-        .voltar {
-            position: absolute;
-            left: 20px;
-            padding: 8px 16px;
-            background: #FFD700;
-            color: black;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        .voltar:hover {
-            transform: scale(1.05);
-        }
-
-        .hero {
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M10 0 L0 0 0 10" stroke="%23FFD700" stroke-width="0.5" opacity="0.15"/></svg>');
-        }
-
-        .hero h1 {
-            font-size: 45px;
-            color: #FFD700;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-            color: #ccc;
+            letter-spacing: 1px;
         }
 
         section {
-            padding: 60px 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
         }
@@ -193,12 +157,12 @@
             border-top: 2px solid #FFD700;
             color: #aaa;
             font-size: 14px;
+            margin-top: 40px;
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .voltar { position: static; margin-bottom: 10px; }
-            header { flex-direction: column; padding: 10px; }
+            body { padding-top: 80px; }
+            h2 { font-size: 28px; }
             .btn-topo { bottom: 20px; right: 20px; }
         }
     </style>
@@ -207,16 +171,8 @@
 <body>
 
     <header>
-        <a href="index.html" class="voltar">Voltar</a>
-        <div class="logo">🏁 SOBRE A EQUIPE</div>
+        <div class="logo">💻 INTEGRANTES DA EQUIPE</div>
     </header>
-
-    <section class="hero">
-        <div>
-            <h1>Divisão de Atribuições</h1>
-            <p>Contribuição e funções de cada integrante no projeto</p>
-        </div>
-    </section>
 
     <section id="sobre">
         <h2>Atividades Realizadas</h2>
@@ -267,7 +223,7 @@
                 <h3>Lucas Martins</h3>
                 <div class="funcao">📋 Gestão de Funções</div>
                 <div class="conteudo">
-                    <p>Responsável pela organização estratégica da equipe,  definindo e explicando as atribuições de cada integrante no projeto.</p>
+                    <p>Responsável pela organização estratégica da equipe, definindo e explicando as atribuições de cada integrante no projeto.</p>
                 </div>
             </div>
 
@@ -287,22 +243,22 @@
     <button class="btn-topo" id="btnTopo" title="Voltar ao topo">▲</button>
 
     <footer>
-        <p>Desenvolvido pela equipe do projeto Ayrton Senna © 2026</p>
+        <p>Desenvolvido pela equipe de desenvolvedores © 2026</p>
     </footer>
 
     <script>
         const btnTopo = document.getElementById('btnTopo');
 
-        // Mostra o botão ao rolar a página para baixo
+        // Monitora o scroll para exibir ou ocultar o botão
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 150) {
                 btnTopo.classList.add('visivel');
             } else {
                 btnTopo.classList.remove('visivel');
             }
         });
 
-        // Evento de clique para rolar até o topo de forma suave
+        // Evento de clique para retornar ao topo com transição suave
         btnTopo.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
