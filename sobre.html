@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayrton Senna - O Rei da Velocidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            color: #FFD700;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(255, 215, 0, 0.3);
+            border-bottom: 3px solid #FFD700;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+            text-shadow: 0 0 20px #FFD700;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                        linear-gradient(45deg, #000 0%, #FFD700 25%, #000 50%, #FFD700 75%, #000 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23FFD700" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+
+        .hero-content h1 {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px #FFD700, 2px 2px 4px #000;
+            color: #FFD700;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 2px 2px 4px #000; }
+            to { text-shadow: 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700, 2px 2px 4px #000; }
+        }
+
+        .hero-content p {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            text-shadow: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.6);
+            background: linear-gradient(45deg, #FFA500, #FFD700);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Biography */
+        .biography {
+            background: rgba(26, 26, 26, 0.9);
+            margin: 2rem 0;
+            border-radius: 25px;
+            padding: 4rem;
+            border: 2px solid #FFD700;
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+        }
+
+        .biography-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .bio-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+            font-weight: bold;
+            text-shadow: none;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Achievements */
+        .achievements {
+            background: rgba(0,0,0,0.7);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.4s;
+            backdrop-filter: blur(10px);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: #FFD700;
+            box-shadow: 0 25px 50px rgba(255, 215, 0, 0.4);
+        }
+
+        .achievement-icon {
+            font-size: 5rem;
+            color: #FFD700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px #FFD700;
+        }
+
+        .achievement-card h3 {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Legacy */
+        .legacy {
+            background: linear-gradient(135deg, #000 0%, rgba(255,215,0,0.05) 50%, #000 100%);
+        }
+
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .legacy-item {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(0,0,0,0.6);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .legacy-item:hover {
+            background: rgba(255,215,0,0.1);
+            border-color: #FFD700;
+            transform: translateY(-10px);
+        }
+
+        /* Gallery */
+        .gallery {
+            background: rgba(0,0,0,0.9);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            height: 280px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-shadow: none;
+            transition: all 0.4s;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 25px 60px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 5px solid #FFD700;
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 0 0 15px #FFD700;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .biography-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 1.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🏁 SENNA 🏁</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#biography">Biografia</a></li>
+                <li><a href="#achievements">Conquistas</a></li>
+                <li><a href="#legacy">Legado</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>AYRTON SENNA</h1>
+            <p>🖤💛 O REI DA VELOCIDADE 💛🖤</p>
+            <a href="#biography" class="cta-button">CONHEÇA A LENDA</a>
+        </div>
+    </section>
+
+    <!-- Biography -->
+    <section id="biography" class="biography fade-in">
+        <h2>Biografia</h2>
+        <div class="biography-content">
+            <div class="bio-image">
+                🏆<br>
+                AYRTON SENNA<br>
+                <span style="font-size: 1.2rem;">1960 - 1994</span>
+            </div>
+            <div>
+                <h3 style="color: #FFD700; font-size: 2rem;">Uma vida dedicada à velocidade</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8;"><strong>Ayrton Senna da Silva</strong> nasceu em 21 de março de 1960, em São Paulo. Desde cedo demonstrou talento excepcional, começando no kart aos 13 anos.</p>
+                <br>
+                <p style="font-size: 1.2rem; line-height: 1.8;">Em 1984 estreou na F1 pela Toleman. Na <strong>Lotus (1985-1987)</strong> se consolidou mundialmente. Na <strong>McLaren (1988-1993)</strong> conquistou 3 títulos mundiais e viveu seus anos de ouro.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="achievements">
+        <h2>🏆 CONQUISTAS</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">👑</div>
+                <h3>3 CAMPEONATOS</h3>
+                <p>1988 • 1990 • 1991</p>
+            </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">🏆</div>
+                <h3>41 VITÓRIAS</h3>
+                <p>41 Grandes Prêmios</p>
+            </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">⚡</div>
+                <h3>65 POLES</h3>
+                <p>2ª maior marca da história</p>
+            </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">🥇</div>
+                <h3>80 PÓDIOS</h3>
+                <p>Consistência lendária</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy -->
+    <section id="legacy" class="legacy">
+        <h2>LEGADO ETERNO</h2>
+        <div class="legacy-grid">
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">💚 Instituto Senna</h3>
+                <p>Milhões de crianças beneficiadas com educação de qualidade desde 1994.</p>
+            </div>
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">🇧🇷 Herói Nacional</h3>
+                <p>Símbolo de determinação, coragem e excelência para o Brasil.</p>
+            </div>
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">🌍 Inspiração Global</h3>
+                <p>Inspira pilotos e pessoas comuns em todo o mundo até hoje.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <h2>🖤💛 GALERIA 💛🖤</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">🏎️ McLaren MP4/4 (1988)</div>
+            <div class="gallery-item fade-in">🌧️ Milagre de Donington</div>
+            <div class="gallery-item fade-in">🥇 Suzuka 1990</div>
+            <div class="gallery-item fade-in">⚡ Monaco 1988</div>
+            <div class="gallery-item fade-in">👑 Tríplice Coroa</div>
+            <div class="gallery-item fade-in">🏁 Interlagos 1991</div>
+        </div>
+    <!-- Seção Equipe de Projeto -->
+    <section id="equipe" class="legacy">
+        <h2>👥 EQUIPE DO PROJETO</h2>
+        <div class="legacy-grid">
+            <!-- Kaique -->
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">🏎️ Kaique</h3>
+                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Conteúdo e Pesquisa Histórica</p>
+                <ul style="text-align: left; list-style: none; font-size: 0.9rem; opacity: 0.9;">
+                    <li>• Biografia detalhada</li>
+                    <li>• Carreira na Fórmula 1</li>
+                    <li>• Títulos e Conquistas</li>
+                    <li>• Momentos Marcantes</li>
+                    <li>• Legado e Impacto</li>
+                    <li>• Instituto Ayrton Senna</li>
+                </ul>
+            </div>
+
+            <!-- Raphael -->
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">💻 Raphael</h3>
+                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Desenvolvimento Web</p>
+                <p>Responsável pela criação e estruturação do <strong>Portfólio Digital</strong>, garantindo a interface e experiência do usuário.</p>
+            </div>
+
+            <!-- Sachetto -->
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">🎨 Sachetto</h3>
+                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Curadoria da Galeria</p>
+                <p>Organização do acervo visual incluindo:</p>
+                <ul style="text-align: left; list-style: none; font-size: 0.9rem; opacity: 0.9;">
+                    <li>• Evolução dos Capacetes</li>
+                    <li>• Indumentária (Macacões)</li>
+                    <li>• Evolução dos Carros</li>
+                </ul>
+            </div>
+
+            <!-- Lucas -->
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">📋 Lucas</h3>
+                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Gestão de Funções</p>
+                <p>Responsável pela organização estratégica da equipe, definindo e explicando as atribuições de cada integrante no projeto.</p>
+            </div>
+
+            <!-- Molon -->
+            <div class="legacy-item fade-in">
+                <h3 style="color: #FFD700;">📄 Molon</h3>
+                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Documentação Técnica</p>
+                <p>Responsável por documentar todo o código e processos para a entrega oficial na próxima terça-feira.</p>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>🖤💛 AYRTON SENNA - O MAIOR DE TODOS OS TEMPOS 💛🖤</p>
+        <p>Feito com ❤️ para eternizar a lenda</p>
+        <p class="quote">"Nada pode me superar. Nada."</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">© 2024 Senna Forever</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 1)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Staggered fade-in
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('fade-in');
+                    }, index * 200);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
