@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senna: O Acervo da Lenda</title>
+
     <style>
         /* Estilos Base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth; /* Rolagem suave nativa para links internos */
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #fff;
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
@@ -41,17 +42,54 @@
             padding: 0 2rem;
         }
 
-        .logo { font-size: 1.8rem; font-weight: bold; color: #FFD700; }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
 
-        .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-links a { color: #FFD700; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .nav-links a:hover { color: #fff; text-shadow: 0 0 20px #FFD700; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
 
-        /* Hero Galeria */
+        .nav-links a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+            text-shadow: 0 0 20px #FFD700;
+        }
+
+        /* Botão Home */
+        .home-btn {
+            background: #FFD700;
+            color: #000 !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #fff;
+            color: #000 !important;
+            box-shadow: 0 0 15px #FFD700;
+            text-shadow: none !important;
+        }
+
+        /* Hero */
         .hero-gallery {
             height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1532906607239-e1bc157c8c1d?q=80&w=2000') center/cover;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1532906607239-e1bc157c8c1d?q=80&w=2000')
+                center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,11 +105,15 @@
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 20px #FFD700; }
-            to { text-shadow: 0 0 40px #FFD700, 0 0 50px #FFD700; }
+            from {
+                text-shadow: 0 0 20px #FFD700;
+            }
+            to {
+                text-shadow: 0 0 40px #FFD700,
+                             0 0 50px #FFD700;
+            }
         }
 
-        /* Container de Seções */
         section {
             padding: 5rem 2rem;
             max-width: 1200px;
@@ -87,7 +129,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Grid de Itens */
         .item-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -138,7 +179,6 @@
             margin-bottom: 10px;
         }
 
-        /* Footer */
         footer {
             background: #000;
             color: #FFD700;
@@ -148,7 +188,7 @@
             margin-top: 5rem;
         }
 
-        /* Botão Voltar ao Topo */
+        /* Botão voltar ao topo */
         #backToTop {
             position: fixed;
             bottom: 30px;
@@ -183,111 +223,168 @@
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">🏁 SENNA MUSEUM</div>
-            <ul class="nav-links">
-                <li><a href="#capacetes">Capacetes</a></li>
-                <li><a href="#macacoes">Macacões</a></li>
-                <li><a href="#carros">Carros</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="logo">🏁 SENNA MUSEUM</div>
 
-    <section class="hero-gallery">
-        <div class="hero-title">
-            <h1>O ACERVO DO CAMPEÃO</h1>
-            <p>A história contada através de suas relíquias</p>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home-btn">🏠 Home</a></li>
+            <li><a href="#capacetes">Capacetes</a></li>
+            <li><a href="#macacoes">Macacões</a></li>
+            <li><a href="#carros">Carros</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero-gallery">
+    <div class="hero-title">
+        <h1>O ACERVO DO CAMPEÃO</h1>
+        <p>A história contada através de suas relíquias</p>
+    </div>
+</section>
+
+<button id="backToTop" title="Voltar ao topo">▲</button>
+
+<section id="capacetes">
+    <h2>🪖 Capacetes Icônicos</h2>
+
+    <div class="item-grid">
+
+        <div class="item-card">
+            <span class="icon-box">🟡</span>
+            <div class="tag">DESIGN CLÁSSICO</div>
+            <h3>O Amarelo de Sid Mosca</h3>
+
+            <p>
+                O design mais famoso da história.
+                As listras verde e azul sobre o amarelo representavam
+                a bandeira brasileira e a agressividade nas pistas.
+            </p>
         </div>
-    </section>
 
-    <button id="backToTop" title="Voltar ao topo">▲</button>
+        <div class="item-card">
+            <span class="icon-box">🏁</span>
+            <div class="tag">1993</div>
 
-    <section id="capacetes">
-        <h2>🪖 Capacetes Icônicos</h2>
-        <div class="item-grid">
-            <div class="item-card">
-                <span class="icon-box">🟡</span>
-                <div class="tag">DESIGN CLÁSSICO</div>
-                <h3>O Amarelo de Sid Mosca</h3>
-                <p>O design mais famoso da história. As listras verde e azul sobre o amarelo representavam a bandeira brasileira e a agressividade nas pistas.</p>
-            </div>
-            <div class="item-card">
-                <span class="icon-box">🏁</span>
-                <div class="tag">1993</div>
-                <h3>Evolução Tecnológica</h3>
-                <p>Modelo utilizado em sua última vitória em Interlagos, com melhorias aerodinâmicas e sistema de rádio avançado para a época.</p>
-            </div>
+            <h3>Evolução Tecnológica</h3>
+
+            <p>
+                Modelo utilizado em sua última vitória em Interlagos,
+                com melhorias aerodinâmicas e sistema de rádio avançado.
+            </p>
         </div>
-    </section>
 
-    <section id="macacoes" style="background: rgba(255, 215, 0, 0.03);">
-        <h2>👕 Macacões de Corrida</h2>
-        <div class="item-grid">
-            <div class="item-card">
-                <span class="icon-box">🔴</span>
-                <div class="tag">MCLAREN</div>
-                <h3>O Vermelho Lendário</h3>
-                <p>O macacão de Nomex usado durante o tricampeonato (88, 90, 91). Carrega as marcas dos patrocinadores clássicos como Marlboro e Shell.</p>
-            </div>
-            <div class="item-card">
-                <span class="icon-box">⚫</span>
-                <div class="tag">LOTUS</div>
-                <h3>John Player Special</h3>
-                <p>O elegante conjunto preto e dourado da fase Lotus, onde Senna conquistou sua primeira vitória sob chuva em Portugal (1985).</p>
-            </div>
+    </div>
+</section>
+
+<section id="macacoes" style="background: rgba(255, 215, 0, 0.03);">
+
+    <h2>👕 Macacões de Corrida</h2>
+
+    <div class="item-grid">
+
+        <div class="item-card">
+            <span class="icon-box">🔴</span>
+            <div class="tag">MCLAREN</div>
+
+            <h3>O Vermelho Lendário</h3>
+
+            <p>
+                O macacão usado durante o tricampeonato
+                com os patrocinadores clássicos.
+            </p>
         </div>
-    </section>
 
-    <section id="carros">
-        <h2>🏎️ Máquinas de Guerra</h2>
-        <div class="item-grid">
-            <div class="item-card">
-                <span class="icon-box">🚀</span>
-                <h3>McLaren MP4/4</h3>
-                <p>Considerado o melhor carro de F1 de todos os tempos. Venceu 15 das 16 corridas em 1988, dando o primeiro título a Ayrton.</p>
-            </div>
-            <div class="item-card">
-                <span class="icon-box">💨</span>
-                <h3>Lotus 97T</h3>
-                <p>O carro que provou que Senna era o "Rei da Chuva". Equipado com o motor Renault Turbo, era uma fera indomável nas mãos de Ayrton.</p>
-            </div>
-            <div class="item-card">
-                <span class="icon-box">💎</span>
-                <h3>Toleman TG184</h3>
-                <p>Onde tudo começou. O carro modesto que Senna levou ao pódio em Mônaco 1984, chocando o mundo do automobilismo.</p>
-            </div>
+        <div class="item-card">
+            <span class="icon-box">⚫</span>
+            <div class="tag">LOTUS</div>
+
+            <h3>John Player Special</h3>
+
+            <p>
+                O elegante conjunto preto e dourado da Lotus,
+                onde Senna conquistou sua primeira vitória sob chuva.
+            </p>
         </div>
-    </section>
 
-    <footer>
-        <p>ACERVO DIGITAL AYRTON SENNA</p>
-        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">"Eu sou parte de uma equipe. Então, quando venço, não sou apenas eu quem vence."</p>
-    </footer>
+    </div>
+</section>
 
-    <script>
-        // Seleciona o botão
-        const backToTopButton = document.querySelector("#backToTop");
+<section id="carros">
 
-        // Mostra/Esconde o botão baseado no scroll
-        window.addEventListener("scroll", () => {
-            if (window.pageYOffset > 400) {
-                backToTopButton.classList.add("show");
-            } else {
-                backToTopButton.classList.remove("show");
-            }
+    <h2>🏎️ Máquinas de Guerra</h2>
+
+    <div class="item-grid">
+
+        <div class="item-card">
+            <span class="icon-box">🚀</span>
+
+            <h3>McLaren MP4/4</h3>
+
+            <p>
+                Considerado o melhor carro de F1 de todos os tempos.
+            </p>
+        </div>
+
+        <div class="item-card">
+            <span class="icon-box">💨</span>
+
+            <h3>Lotus 97T</h3>
+
+            <p>
+                O carro que provou que Senna era o Rei da Chuva.
+            </p>
+        </div>
+
+        <div class="item-card">
+            <span class="icon-box">💎</span>
+
+            <h3>Toleman TG184</h3>
+
+            <p>
+                O carro que revelou Ayrton Senna ao mundo.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>ACERVO DIGITAL AYRTON SENNA</p>
+
+    <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">
+        "Eu sou parte de uma equipe.
+        Então, quando venço, não sou apenas eu quem vence."
+    </p>
+</footer>
+
+<script>
+
+    const backToTopButton = document.querySelector("#backToTop");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.pageYOffset > 400) {
+            backToTopButton.classList.add("show");
+        } else {
+            backToTopButton.classList.remove("show");
+        }
+
+    });
+
+    backToTopButton.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
         });
 
-        // Função de clique para voltar ao topo suavemente
-        backToTopButton.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
+    });
+
+</script>
 
 </body>
 </html>
