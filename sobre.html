@@ -7,12 +7,14 @@
     <title>Sobre a Equipe</title>
 
     <style>
+        /* Reset básico para garantir consistência entre navegadores */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Estilo geral do corpo da página */
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #000, #1a1a1a, #000);
@@ -21,6 +23,7 @@
             padding-top: 100px;
         }
 
+        /* Estilo do cabeçalho fixo */
         header {
             background: rgb(2, 0, 0);
             padding: 20px;
@@ -34,7 +37,7 @@
             justify-content: center;
         }
 
-        /* Estilo do novo botão Voltar */
+        /* Estilo do  botão Voltar */
         .btn-voltar {
             position: absolute;
             left: 20px;
@@ -51,11 +54,13 @@
             transition: all 0.3s ease;
         }
 
+        /* Efeito de hover para o botão Voltar */
         .btn-voltar:hover {
             background: #FFD700;
             color: #000;
         }
 
+        /* Estilo do logo central */
         .logo {
             color: #FFD700;
             font-size: 24px;
@@ -64,12 +69,14 @@
             letter-spacing: 1px;
         }
 
+        /* Estilo para a seção principal */
         section {
             padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
         }
 
+        /* Estilo para o título da seção */
         h2 {
             text-align: center;
             margin-bottom: 40px;
@@ -78,12 +85,14 @@
             text-transform: uppercase;
         }
 
+        /* Estilo para a grade de cards */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
+        /* Estilo para os cards de cada integrante */
         .card {
             background: rgba(255, 215, 0, 0.03);
             border: 1px solid rgba(255, 215, 0, 0.3);
@@ -92,6 +101,7 @@
             transition: all 0.3s ease;
         }
 
+        /* Efeito de hover para os cards */
         .card:hover {
             transform: translateY(-5px);
             border-color: #FFD700;
@@ -99,12 +109,14 @@
             box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
         }
 
+        /* Estilo para o nome de cada integrante */
         .card h3 {
             color: #FFD700;
             font-size: 22px;
             margin-bottom: 5px;
         }
 
+        /* Estilo para a função de cada integrante */
         .funcao {
             font-weight: bold;
             color: #fff;
@@ -115,6 +127,7 @@
             opacity: 0.9;
         }
 
+        /* Estilo para o conteúdo dentro dos cards */
         .conteudo {
             font-size: 15px;
             line-height: 1.6;
@@ -122,17 +135,20 @@
             text-align: left;
         }
 
+        /* Estilo para as listas dentro do conteúdo */
         .conteudo ul {
             list-style: none;
             margin-top: 5px;
         }
 
+        /* Estilo para os itens da lista */
         .conteudo ul li {
             position: relative;
             padding-left: 15px;
             margin-bottom: 5px;
         }
 
+        /* Estilo personalizado para os marcadores das listas */
         .conteudo ul li::before {
             content: "•";
             color: #FFD700;
@@ -141,6 +157,7 @@
             font-weight: bold;
         }
 
+        /* Estilo do botão voltar ao topo */
         .btn-topo {
             position: fixed;
             bottom: 30px;
@@ -160,20 +177,23 @@
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
+        /* Exibe o botão voltar ao topo quando o usuário rolar para baixo */
         .btn-topo.visivel {
             opacity: 1;
             visibility: visible;
         }
 
+        /* Animação de hover para o botão voltar ao topo */
         .btn-topo:hover {
             background: #FFD700;
             color: #000;
             transform: scale(1.1);
         }
 
+        /* Estilo do rodapé */
         footer {
             text-align: center;
             padding: 30px;
@@ -183,13 +203,36 @@
             margin-top: 40px;
         }
 
+        /* Responsividade */
         @media (max-width: 768px) {
-            body { padding-top: 80px; }
-            h2 { font-size: 28px; }
-            .btn-topo { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+            body {
+                padding-top: 80px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .btn-topo {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
             /* Ajuste para o botão voltar em telas menores */
-            .btn-voltar { padding: 6px 12px; font-size: 12px; left: 15px; }
-            .logo { font-size: 18px; margin-left: 40px; } /* Evita que o logo monte em cima do botão */
+            .btn-voltar {
+                padding: 6px 12px;
+                font-size: 12px;
+                left: 15px;
+            }
+
+            .logo {
+                font-size: 18px;
+                margin-left: 40px;
+            }
+
+            /* Evita que o logo monte em cima do botão */
         }
     </style>
 </head>
@@ -197,9 +240,9 @@
 <body>
 
     <header>
-        <!-- Botão Voltar decorativo (sem função) -->
-        <a href="#" class="btn-voltar" onclick="return false;">← Voltar</a>
-        
+        /* Botão Voltar decorativo (sem função) */
+        <a href="#" class="btn-voltar">Voltar</a>
+
         <div class="logo">💻 INTEGRANTES DA EQUIPE</div>
     </header>
 
@@ -208,7 +251,7 @@
 
         <div class="grid">
 
-            <!-- Kaique -->
+            /* Kaique e falando o que fez*/
             <div class="card">
                 <h3>Kaique Carmo</h3>
                 <div class="funcao">🏎️ Conteúdo e Pesquisa Histórica</div>
@@ -224,34 +267,37 @@
                 </div>
             </div>
 
-            <!-- Raphael -->
+            /* Raphael e falando o que fez*/
             <div class="card">
                 <h3>Raphael Ferreira</h3>
                 <div class="funcao">💻 Desenvolvimento Web</div>
                 <div class="conteudo">
-                    <p>Responsável pela criação e estruturação do Portfólio Digital, garantindo a interface e experiência do usuário.</p>
+                    <p>Responsável pela criação e estruturação do Portfólio Digital, garantindo a interface e
+                        experiência do usuário.</p>
                 </div>
             </div>
 
-            <!-- Sachetto -->
+            /* Pedro Sachetto e falando o que fez */
             <div class="card">
                 <h3>Pedro Sachetto</h3>
                 <div class="funcao">📄 Documentação Técnica</div>
                 <div class="conteudo">
-                    <p>Responsável por documentar todo o código e processos para a entrega oficial na próxima terça-feira.</p>
+                    <p>Responsável por documentar todo o código e processos para a entrega oficial na próxima
+                        terça-feira.</p>
                 </div>
             </div>
 
-            <!-- Lucas -->
+            /* Lucas Martins e falando o que fez */
             <div class="card">
                 <h3>Lucas Martins</h3>
                 <div class="funcao">📋 Gestão de Funções</div>
                 <div class="conteudo">
-                    <p>Responsável pela organização estratégica da equipe, definindo e explicando as atribuições de cada integrante no projeto.</p>
+                    <p>Responsável pela organização estratégica da equipe, definindo e explicando as atribuições de cada
+                        integrante no projeto.</p>
                 </div>
             </div>
 
-            <!-- Molon -->
+            /* Matheus Molon e falando o que fez */
             <div class="card">
                 <h3>Matheus Molon</h3>
                 <div class="funcao">🎨 Curadoria da Galeria</div>
@@ -268,9 +314,9 @@
         </div>
     </section>
 
-    <!-- Botão Voltar ao Topo -->
+    /* Botão para voltar ao topo da página */
     <button class="btn-topo" id="btnTopo" title="Voltar ao topo">▲</button>
-
+    /* Rodapé da página */
     <footer>
         <p>Desenvolvido pela equipe de desenvolvedores © 2026</p>
     </footer>
@@ -278,16 +324,16 @@
     <script>
         const btnTopo = document.getElementById('btnTopo');
 
-        // Monitora o scroll com uma margem segura
+        /* Monitora o scroll com uma margem segura */
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) { 
+            if (window.scrollY > 200) {
                 btnTopo.classList.add('visivel');
             } else {
                 btnTopo.classList.remove('visivel');
             }
         });
 
-        // Evento de clique para retornar ao topo de forma suave
+        /* Evento de clique para retornar ao topo de forma suave */
         btnTopo.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -297,4 +343,5 @@
     </script>
 
 </body>
+
 </html>
