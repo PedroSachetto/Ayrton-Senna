@@ -34,6 +34,28 @@
             justify-content: center;
         }
 
+        /* Estilo do novo botão Voltar */
+        .btn-voltar {
+            position: absolute;
+            left: 20px;
+            background: transparent;
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-voltar:hover {
+            background: #FFD700;
+            color: #000;
+        }
+
         .logo {
             color: #FFD700;
             font-size: 24px;
@@ -119,7 +141,6 @@
             font-weight: bold;
         }
 
-        /* O que mudou/melhorou aqui: Garantiu que o botão use propriedades robustas de transição */
         .btn-topo {
             position: fixed;
             bottom: 30px;
@@ -166,6 +187,9 @@
             body { padding-top: 80px; }
             h2 { font-size: 28px; }
             .btn-topo { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+            /* Ajuste para o botão voltar em telas menores */
+            .btn-voltar { padding: 6px 12px; font-size: 12px; left: 15px; }
+            .logo { font-size: 18px; margin-left: 40px; } /* Evita que o logo monte em cima do botão */
         }
     </style>
 </head>
@@ -173,6 +197,9 @@
 <body>
 
     <header>
+        <!-- Botão Voltar decorativo (sem função) -->
+        <a href="#" class="btn-voltar" onclick="return false;">← Voltar</a>
+        
         <div class="logo">💻 INTEGRANTES DA EQUIPE</div>
     </header>
 
@@ -209,7 +236,7 @@
             <!-- Sachetto -->
             <div class="card">
                 <h3>Pedro Sachetto</h3>
-<div class="funcao">📄 Documentação Técnica</div>
+                <div class="funcao">📄 Documentação Técnica</div>
                 <div class="conteudo">
                     <p>Responsável por documentar todo o código e processos para a entrega oficial na próxima terça-feira.</p>
                 </div>
