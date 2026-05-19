@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">INÍCIO</a>
+            <a href="">PORTIFÓLIO</a>
+            <a href="">HOME</a>
+            <a href="">CONQUISTAS</a>
+        </nav>
+    </header>
+
+    <div>
+        <div>
+         <h1>Biográfia</h1>
+          <p>Ayrton Senna foi um dos maiores pilotos da história da Fórmula 1. Nasceu em 21 de março de 1960, em São Paulo,
+            e desde criança mostrou talento no automobilismo, começando no kart.
+            Ele estreou na Fórmula 1 em 1984 e ficou famoso pela velocidade, habilidade na chuva e determinação nas corridas.
+            Durante sua carreira, conquistou 3 títulos mundiais, nos anos de 1988, 1990 e 1991, pilotando principalmente pela equipe McLaren.
+            Senna também era admirado fora das pistas por sua humildade e por ajudar pessoas carentes. Em 1º de maio de 1994, sofreu um acidente durante o Grande Prêmio
+            de San Marino de 1994, 
+            em Ímola, e faleceu aos 34 anos. Até hoje, é considerado um ídolo do esporte brasileiro e mundial.
+          </p>
+       </div>
+
+       <div>  
+          <h1>Carreira</h1>
+          <p>
+             Ayrton Senna começou sua carreira na Fórmula 1 em 1984, pela equipe Toleman. Depois passou pela Lotus Cars, onde conquistou
+             suas primeiras vitórias. Seu maior sucesso aconteceu na McLaren, equipe pela qual ganhou 3 campeonatos mundiais, em 1988, 1990 e 1991.
+             Senna ficou conhecido por sua velocidade, talento em corridas na chuva e pela rivalidade com Alain Prost. Em 1994, enquanto corria pela Williams Racing,
+             sofreu um acidente fatal no Grande Prêmio de San Marino de 1994, tornando-se um dos maiores ídolos da história do automobilismo.
+          </p>
+
+
+       </div>
+
+       <div>
+           <h1>Títulos e Conquistas</h1>
+            <ul>
+                <li>3 títulos mundiais de Fórmula 1: 1988, 1990 e 1991;</li>
+                <li>40 vitórias em Grandes Prêmios;</li>
+                <li>65 pole positions, recorde da categoria durante muitos anos;</li>
+                <li>Reconhecido como um dos melhores pilotos em corridas na chuva;</li>
+                <li>Grande rivalidade histórica com Alain Prost;</li>
+                <li>Tornou-se um dos maiores ídolos do esporte brasileiro e mundial;</li>
+                <li>Recebeu homenagens em autódromos, museus e eventos esportivos após sua morte.</li>
+
+            </ul>
+       </div>
+
+       <div>
+          <h1>Instituto Ayrton Senna</h1>
+           <p>
+            O Instituto Ayrton Senna foi criado em 1994, após a morte de Ayrton Senna, pela sua família. 
+            A instituição tem como objetivo ajudar crianças e jovens do Brasil por meio da educação.
+            O instituto desenvolve projetos para melhorar o ensino, incentivar o aprendizado e oferecer mais oportunidades para 
+            estudantes e professores. Suas ações já beneficiaram milhões de alunos em várias regiões do país.
+            Além de manter vivo o legado de Ayrton Senna, o instituto é reconhecido pelo trabalho social e educacional realizado no Brasil.
+           </p>
+       </div>
+
+       <div>
+          <h1>Legado</h1>
+           <p>
+             O legado de Ayrton Senna vai além das pistas de corrida. Ele é lembrado como um dos maiores pilotos da
+             história da Fórmula 1, conhecido por sua velocidade, dedicação e determinação.
+             Senna inspirou milhões de brasileiros com suas vitórias e seu orgulho em representar o Brasil no esporte. 
+             Seu talento em corridas na chuva e seus 3 títulos mundiais fizeram dele um ídolo mundial.
+             Além do automobilismo, seu legado continua através do Instituto Ayrton Senna, que ajuda crianças e jovens 
+             por meio da educação. Até hoje, Ayrton Senna é lembrado como símbolo de superação, talento e paixão pelo que fazia.
+           </p>
+       </div>
+
+
+
+    </div>
+    
+</body>
+<style>
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000; /* preto */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    padding: 15px 86px;
+    border-bottom: 3px solid #FFD700; /* amarelo */
+}
+
+/* Menu */
+nav {
+    display: flex;
+    justify-content: right;
+    gap: 75px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFD700; /* amarelo */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00A859; /* verde */
+}
+
+/* Container principal */
+body > div {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Seções */
+body > div > div {
+    background-color: #111;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 5px solid #00A859; /* verde */
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+body > div > div:hover {
+    transform: scale(1.02);
+    border-left: 5px solid #FFD700;
+}
+
+/* Títulos */
+h1 {
+    color: #FFD700; /* amarelo */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00A859;
+    padding-bottom: 5px;
+}
+
+/* Parágrafos */
+p {
+    color: #ddd;
+}
+
+/* Lista */
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+</style>
+
+</html>
