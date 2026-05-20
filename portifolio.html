@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio da Equipe</title>
+
+    <style>
+        /* Reset básico para garantir consistência entre navegadores */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #000, #1a1a1a, #000);
+            color: white;
+        }
+
+        /* Estilos para o cabeçalho fixo */
+        header {
+            background: rgb(2, 0, 0);
+            padding: 15px;
+            border-bottom: 3px solid #FFD700;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Estilos para o logo no cabeçalho */
+        .logo {
+            color: #FFD700;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Estilos para o botão de voltar */
+        .voltar {
+            position: absolute;
+            left: 20px;
+            padding: 8px 16px;
+            background: #FFD700;
+            color: black;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Estilos para a seção hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Estilos para o título e parágrafo na seção hero */
+        .hero h1 {
+            font-size: 50px;
+            color: #FFD700;
+        }
+
+        /* Estilos para o parágrafo na seção hero */
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* Estilos para as seções de conteúdo */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Estilos para os títulos das seções */
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFD700;
+            font-size: 40px;
+        }
+
+        /* Estilos para a grade de cartões */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Estilos para os cartões individuais */
+        .card {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #FFD700;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* Estilos para os títulos dentro dos cartões */
+        .card h3 {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para os parágrafos dentro dos cartões */
+        .card p {
+            margin: 5px 0;
+        }
+
+        /* Estilos para os botões dentro dos cartões */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #FFD700;
+            color: black;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid #FFD700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="voltar">Voltar</a>
+        <div class="logo">💻 PORTFÓLIO</div>
+    </header>
+    /* Seção hero com título e descrição */
+    <section class="hero">
+        <div>
+            <h1>Equipe de Desenvolvedores</h1>
+            <p>Projetos em HTML, CSS e Programação</p>
+        </div>
+    </section>
+    /* Seção de integrantes com cartões para cada membro da equipe */
+    <section>
+        <h2>Integrantes</h2>
+
+        <div class="grid">
+            /* Cartão para Raphael Ferreira */
+            <div class="card">
+                <h3>Raphael Ferreira</h3>
+                <p>Projetos:</p>
+                <p>• Site Senna</p>
+                <p>• Site hobby</p>
+                <p>• Site Feira tecnológica</p>
+                <p>• Site comidas</p>
+                <a href="https://github.com/Rapha2601?tab=repositories" class="btn">GitHub</a>
+            </div>
+            /* Cartão para Pedro Sachetto */
+            <div class="card">
+                <h3>Pedro Sachetto</h3>
+                <p>Projetos:</p>
+                <p>• Site Senna</p>
+                <p>• Site hobby</p>
+                <p>• Feira</p>
+                <p>• Site comidas</p>
+                <a href="https://github.com/PedroSachetto" class="btn">GitHub</a>
+            </div>
+            /* Cartão para Matheus Molon */
+            <div class="card">
+                <h3>Matheus Molon</h3>
+                <p>Projetos:</p>
+                <p>• Site Senna</p>
+                <p>• Site Feira tecnológica</p>
+                <p>• Site Hobby</p>
+                <a href="https://github.com/matheusmolon2" class="btn">GitHub</a>
+            </div>
+            /* Cartão para Lucas Martins */
+            <div class="card">
+                <h3>Lucas Martins</h3>
+                <p>Projetos:</p>
+                <p>• Site Senna</p>
+                <p>• Site hobby</p>
+                <p>• Site Feira tecnológica</p>
+                <p>• Site sabores</p>
+                <p>• Sociedade Esportiva Palmeiras</p>
+                <a href="https://github.com/lucasmp2" class="btn">GitHub</a>
+            </div>
+            /* Cartão para Kaique Carmo */
+            <div class="card">
+                <h3>Kaique Carmo</h3>
+                <p>Projetos:</p>
+                <p>• Site Senna</p>
+                <p>• Auxílio em trabalho de TCC</p>
+                <p>• Site Feira tecnológica</p>
+                <p>• Site Hobby</p>
+                <a href="https://github.com/KaiqueCar" class="btn">GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido pela equipe 💻</p>
+    </footer>
+
+</body>
+
+</html>
